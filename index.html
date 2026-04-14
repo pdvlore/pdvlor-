@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partia Demokratike - Dega Vlorë</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --pd-blue: #1b4e9b; /* Exact PD Blue from your screenshot */
+            --pd-light-blue: #e8f0fe;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; }
+
+        /* Top Header Area */
+        .top-nav {
+            background-color: var(--pd-blue);
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-img { width: 45px; height: 45px; filter: brightness(0) invert(1); }
+        .brand-text { font-weight: bold; line-height: 1.2; font-size: 1.1rem; }
+
+        /* Social Icons Bar */
+        .social-bar { background-color: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 4px; display: inline-flex; gap: 15px; margin-left: 15px; }
+        .social-bar a { color: white; text-decoration: none; font-size: 0.9rem; }
+
+        /* Main Hero Section */
+        .hero-banner {
+            background: linear-gradient(rgba(27, 78, 155, 0.4), rgba(27, 78, 155, 0.6)), 
+                        url('https://pd.al/wp-content/uploads/2021/04/cropped-pd-logo-bg.jpg'); /* Representative background */
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Cookie Consent Pop-up (Like your screenshot) */
+        #cookieModal {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .btn-accept { background-color: var(--pd-blue); color: white; width: 100%; border-radius: 8px; padding: 10px; border: none; font-weight: bold; margin-bottom: 10px; }
+        .btn-deny { background-color: #f8f9fa; color: #333; width: 100%; border-radius: 8px; padding: 10px; border: 1px solid #ddd; }
+
+        .language-flags { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <header class="top-nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo-area">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Partia_Demokratike_e_Shqip%C3%ABris%C3%AB_Logo.svg/1200px-Partia_Demokratike_e_Shqip%C3%ABris%C3%AB_Logo.svg.png" class="logo-img" alt="PD Logo">
+                <div class="brand-text">Partia<br>Demokratike</div>
+            </div>
+            
+            <div class="d-flex align-items-center">
+                <div class="language-flags d-none d-md-flex me-3">
+                    <span>🇦🇱</span>
+                    <span>🇬🇧</span>
+                </div>
+                <button class="btn text-white border-0"><i class="fas fa-bars fa-lg"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <div class="social-bar">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <section class="hero-banner mt-3">
+        </section>
+
+    <div id="cookieModal">
+        <div class="d-flex justify-content-between align-items-start mb-3">
+            <div class="d-flex align-items-center gap-2">
+                <img src="https://pd.al/wp-content/uploads/2021/03/cropped-favicon-32x32.png" width="20">
+                <small class="fw-bold text-primary">Partia Demokratike</small>
+            </div>
+            <button class="btn-close" onclick="closeCookies()"></button>
+        </div>
+        <p class="small text-muted text-start">Për të ofruar eksperiencën më të mirë, ne përdorim teknologji si cookies për të ruajtur dhe/ose aksesuar informacionin e pajisjes. Pëlqimi do të na lejojë të përpunojmë të dhëna.</p>
+        <button class="btn-accept" onclick="closeCookies()">Accept</button>
+        <button class="btn-deny" onclick="closeCookies()">Deny</button>
+        <div class="mt-2">
+            <a href="#" class="small text-decoration-none me-2">Cookie Policy</a>
+            <a href="#" class="small text-decoration-none">Politikat e Privatësisë</a>
+        </div>
+    </div>
+
+    <script>
+        function closeCookies() {
+            document.getElementById('cookieModal').style.display = 'none';
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
